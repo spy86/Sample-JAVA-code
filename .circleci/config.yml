@@ -9,7 +9,7 @@ jobs:
           command: git clone https://bitbucket.org/devops_sysops/java.git
       - run:
           name: Run Maven SonarQube
-          command: mvn clean && mvn install && mvn sonar:sonar -Dsonar.projectKey=Java -Dsonar.organization=$ORG -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$TOKEN
+          command: mvn sonar:sonar -Dsonar.projectKey=Java -Dsonar.organization=$ORG -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$TOKEN
 workflows:
   version: 2
   test:
